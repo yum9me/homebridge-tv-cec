@@ -41,7 +41,7 @@ module.exports = homebridge => {
 				if (traffic.indexOf('>> 0f:36') !== -1) {
 					tvEvent.emit('POWER_OFF');
 				}
-				if (traffic.indexOf('>> 01:90:00') !== -1) {
+				if (traffic.indexOf('>> 01:90:00') !== -1 || traffic.indexOf('>> 0f:32') !== -1) {
 					tvEvent.emit('POWER_ON');
 				}
 				const match = />> (0f:80:\d0:00|0f:86):(\d)0:00/.exec(traffic);
