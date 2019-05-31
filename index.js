@@ -103,7 +103,7 @@ module.exports = homebridge => {
 		}
 
 		setPowerStatus(value, callback) {
-			this.log.info(`Turning TV ${value ? 'on' : 'fff'}`);
+			this.log.info(`Turning TV ${value ? 'on' : 'off'}`);
 			if (value === this.tvService.getCharacteristic(Characteristic.Active).value) {
 				callback();
 				this.log.info(`TV is already ${value ? 'on' : 'off'}`);
